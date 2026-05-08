@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://4tv.smotrim-filmix.xyz/sitemap.xml
 Sitemap: https://4tv.smotrim-filmix.xyz/sitemap1.xml
