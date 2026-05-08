@@ -2,34 +2,41 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>404</title>
+
 <script>
 (function () {
+
     let path = decodeURIComponent(window.location.pathname);
 
-    // убираем слеши
+    // убираем первый слеш
     path = path.replace(/^\/+/, "");
 
+    // если пусто — показываем крако
     if (!path) {
-        window.location.replace("/");
+        document.body.innerHTML = "Xo?.4tv";
         return;
     }
 
-    // 👉 твоя “кракозябра” → имя файла
-    // пример: Koloniia-2026-VW?.4tv → Koloniia-2026-VW.html
-
-    // убираем всё после странных символов типа ?, !
+    // убираем мусор после ? ! %
     let clean = path.split("?")[0]
                     .split("!")[0]
                     .split("%")[0];
 
-    // если нет .html — добавляем
+    // добавляем .html
     if (!clean.endsWith(".html")) {
-        clean = clean + ".html";
+        clean += ".html";
     }
 
+    // редирект
     window.location.replace("/" + clean);
+
 })();
 </script>
+
 </head>
-<body></body>
+
+<body>
+Xo?.1tv
+</body>
 </html>
